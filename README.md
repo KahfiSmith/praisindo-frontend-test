@@ -10,10 +10,7 @@ reactjs-project-set-up/
 │
 └── src/                  # Main folder containing the application's code.
     ├── components/       # Contains React components divided into several abstraction levels.
-    │   ├── atoms/        # The smallest components that cannot be split further (e.g., Button, Input).
-    │   ├── molecules/    # A combination of atoms forming more complex components (e.g., Form Field).
-    │   ├── organisms/    # Larger components combining molecules and atoms (e.g., Header, Card).
-    │   ├── templates/    # Basic page structure combining multiple organisms.
+    │   ├── ui/           # The smallest components that cannot be split further (e.g., Button, Input).
     │
     ├── config/           # Configuration such as API and Firebase settings.
     │
