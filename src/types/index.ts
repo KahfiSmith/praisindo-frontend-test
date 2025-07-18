@@ -14,31 +14,41 @@ export interface ArticleSearchParams {
   sort?: 'newest' | 'oldest' | 'relevance';
   begin_date?: string; 
   end_date?: string;   
-  fq?: string;         
+  fq?: string;
+  fl?: string;
+}
+
+export interface Keyword {
+  name: string;
+  value: string;
+  rank: number;
+  major: string;
 }
 
 export interface Article {
   headline: {
     main: string;
-    kicker: string;
-    print_headline: string;
+    kicker?: string;
+    print_headline?: string;
   };
   abstract?: string;
   web_url: string;
-  snippet: string;
-  lead_paragraph: string;
+  snippet?: string;
+  lead_paragraph?: string;
   pub_date: string;
+  subsection_name?: string;
   multimedia: Array<{
     url: string;
     type: string;
     height: number;
     width: number;
-    caption: string;
+    caption?: string;
   }>;
-  byline: {
+  byline?: {
     original: string;
   };
-  section_name: string;
+  section_name?: string;
+  keywords?: Keyword[];
   _id: string;
 }
 
